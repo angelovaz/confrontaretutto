@@ -1751,7 +1751,7 @@ ul {
         padding-left: 0;
         border-top: none;
         padding-top: 16px;
-        overflow: visible;
+        overflow: hidden;
     }
 
     .screens-row-inner {
@@ -1759,6 +1759,7 @@ ul {
         flex-wrap: nowrap;
         overflow-x: auto;
         overflow-y: visible;
+        width: 100%;
         gap: 10px;
         padding: 0 20px 10px;
         -webkit-overflow-scrolling: touch;
