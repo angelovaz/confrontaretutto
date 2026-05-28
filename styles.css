@@ -1235,31 +1235,56 @@ ul {
         scroll-snap-align: start;
     }
 
-    /* ── Compliance strip: one line, no wrap ── */
-    .compliance-section { padding: 16px 0; }
+    /* ── Compliance strip: text above, logos centered in a row below ── */
+    .compliance-section {
+        padding: 20px 0;
+    }
 
     .compliance-inner {
-        flex-wrap: nowrap;
-        gap: 12px;
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding: 0 16px;
-        -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        overflow-x: visible;
+        justify-content: center;
+        align-items: center;
+        padding: 0 24px;
+        text-align: center;
+    }
+
+    /* Hide the vertical divider between text and logos */
+    .compliance-inner > .compliance-vline {
+        display: none;
     }
 
     .compliance-legal-text {
-        font-size: 9px;
-        white-space: nowrap;
-        flex-shrink: 0;
+        font-size: 11px;
+        line-height: 1.45;
+        white-space: normal;
+        color: #666;
+        margin: 0;
+        text-align: center;
+        max-width: 480px;
     }
 
     .compliance-logos-row {
-        flex-wrap: nowrap;
-        gap: 10px;
-        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+        margin: 0 auto;
     }
 
-    .compliance-vline { flex-shrink: 0; }
+    .compliance-logos-row .compliance-vline {
+        display: block;
+        height: 18px;
+        background-color: rgba(0, 0, 0, 0.12);
+        width: 1.5px;
+        margin: 0;
+        flex-shrink: 0;
+    }
 
     /* ── Categories / dark banner ── */
     .category-row { gap: 20px; padding: 24px 0; }
